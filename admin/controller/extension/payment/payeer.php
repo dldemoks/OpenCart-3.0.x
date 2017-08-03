@@ -12,7 +12,7 @@ class ControllerExtensionPaymentPayeer extends Controller {
 		{
 			$this->model_setting_setting->editSetting('payeer', $this->request->post);
 			$this->session->data['success'] = $this->language->get('text_success');
-			$this->response->redirect($this->url->link('extension/extension', 'user_token=' . $this->session->data['user_token'] . '&type=payment', true));
+			$this->response->redirect($this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=payment', true));
 		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -229,15 +229,6 @@ class ControllerExtensionPaymentPayeer extends Controller {
 		$this->load->model('localisation/geo_zone');
 
 		$data['geo_zones'] = $this->model_localisation_geo_zone->getGeoZones();
-
-		if (isset($this->request->post['payeer_status'])) 
-		{
-			$data['payeer_status'] = $this->request->post['payeer_status'];
-		} 
-		else 
-		{
-			$data['payeer_status'] = $this->config->get('payeer_status');
-		}
 
 		if (isset($this->request->post['payeer_sort_order'])) 
 		{

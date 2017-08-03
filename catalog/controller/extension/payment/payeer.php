@@ -46,17 +46,17 @@ class ControllerExtensionPaymentPayeer extends Controller
 			
 			$log_text = 
 			"--------------------------------------------------------\n" .
-			"operation id		" . $request['m_operation_id'] . "\n" .
-			"operation ps		" . $request['m_operation_ps'] . "\n" .
-			"operation date		" . $request['m_operation_date'] . "\n" .
-			"operation pay date	" . $request['m_operation_pay_date'] . "\n" .
-			"shop				" . $request['m_shop'] . "\n" .
-			"order id			" . $request['m_orderid'] . "\n" .
-			"amount				" . $request['m_amount'] . "\n" .
-			"currency			" . $request['m_curr'] . "\n" .
-			"description		" . base64_decode($request['m_desc']) . "\n" .
-			"status				" . $request['m_status'] . "\n" .
-			"sign				" . $request['m_sign'] . "\n\n";
+			"operation id       " . $request['m_operation_id'] . "\n" .
+			"operation ps       " . $request['m_operation_ps'] . "\n" .
+			"operation date     " . $request['m_operation_date'] . "\n" .
+			"operation pay date " . $request['m_operation_pay_date'] . "\n" .
+			"shop               " . $request['m_shop'] . "\n" .
+			"order id           " . $request['m_orderid'] . "\n" .
+			"amount             " . $request['m_amount'] . "\n" .
+			"currency           " . $request['m_curr'] . "\n" .
+			"description        " . base64_decode($request['m_desc']) . "\n" .
+			"status             " . $request['m_status'] . "\n" .
+			"sign               " . $request['m_sign'] . "\n\n";
 			
 			$log_file = $this->config->get('payeer_log_value');
 			
