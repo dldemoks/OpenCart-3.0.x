@@ -1,2 +1,0 @@
-INSERT INTO `setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `serialized`) VALUES  
-('', 0, 'payeer', 'payment_payeer_status', 1, 0)
